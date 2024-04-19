@@ -4,9 +4,9 @@ services:
       - pg-network
     image: postgres:latest
     environment:
-      POSTGRES_USER: alt_school_user
+      POSTGRES_USER: ecomm_user
       POSTGRES_PASSWORD: secretPassw0rd
-      POSTGRES_DB: alt_school_db
+      POSTGRES_DB: ecomm_db
     ports:
       - "5434:5432"
     volumes:
