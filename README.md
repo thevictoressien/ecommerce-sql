@@ -11,18 +11,6 @@ The project repository contains the following files and folders:
 - **queries:** Contains an `queries.sql` file where I provide SQL statements to answer specific questions related to the assessment.
 - **.gitignore:** Specifies intentionally untracked files to ignore.
 - **docker-compose.yml:** Defines the services, networks, and volumes required for the Docker setup.
-
-## Understanding the Data
-
-The dataset primarily captures event-level data around customer activities on the e-commerce platform. The flow of events includes customer visits, adding items to carts, removing items, and completing or abandoning purchases.
-
-![E-commerce Flow](assets/flow.png)
-
-A crucial aspect to note is the reliability of the events table as the primary source of truth. There may be technical errors, such as inaccuracies in the checkout timestamps in the orders table, so I rely primarily on the events data to distinguish between completed purchases and abandoned carts.
-
-![Data Relationships](assets/relationships.png)
-
-
 ## Setting Up the Server
 
 To get started, follow these steps:
