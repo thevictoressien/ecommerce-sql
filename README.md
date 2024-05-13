@@ -8,9 +8,21 @@ The project repository contains the following files and folders:
 
 - **data:** This folder contains the dataset provided by the e-commerce startup. It includes event-level data capturing customer activities on the platform, customer data, products data, orders data and line items data.
 - **infra_setup:** Here, you'll find the necessary setup files for the infrastructure, including an `init.sql` script for initializing the PostgreSQL database.
-- **queries:** Contains an `queries.sql` file where I provide SQL statements to answer specific questions related to the assessment.
+- **queries:** Contains an `queries.sql` file where I provide SQL statements to answer domain specific business questions.
 - **.gitignore:** Specifies intentionally untracked files to ignore.
 - **docker-compose.yml:** Defines the services, networks, and volumes required for the Docker setup.
+## About the Data
+- customers: Contains information about customers, such as their unique identifiers, device identifiers, locations and their currency.
+- events: Stores data related to customer events on the e-commerce platform, including customer ID timestamps, event data like event types e.g. visits, checkout and add to and removal from cart.
+- products: Holds details about the products available, such as their IDs, names, and prices.
+- orders: Holds information about orders placed on the platform. The order ID, the customer ID, the status of the order(success, failed or cancelled), and the checkout time.
+- line_items: Holds information regarding individual products in an order. The order ID, product ID, the quantity of the product ordered.
+
+### Caveats
+- Due to some discrepancies in the data, it is wise to consider the events data the single source of ground truth.
+- It is also imperative not to define explicit relationship constraints between tables when creating them(If you chose to edit the `init.sql` file)
+  
+![image](assets/ERD-ecomm.png)
 ## Setting Up the Server
 
 To get started, follow these steps:
